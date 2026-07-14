@@ -32,7 +32,7 @@ Built for The Injective Global Cup, July 2026.
 ### 1. Install CupKit MCP Server
 
 ```bash
-git clone https://github.com/damli40/cupkit
+git clone https://github.com/subheeksh5599/cupkit
 cd cupkit/mcp-server
 npm install
 ```

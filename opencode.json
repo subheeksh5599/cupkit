@@ -1,0 +1,13 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "mcp": {
+    "cupkit": {
+      "type": "local",
+      "command": "node",
+      "args": [
+        "/home/arch/cupkit/mcp-server/server.js"
+      ],
+      "enabled": true
+    }
+  }
+}

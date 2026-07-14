@@ -142,7 +142,7 @@ The `SKILL.md` file is a portable Agent Skill that documents every tool, provide
 
 ### Frontend
 ```bash
-git clone https://github.com/damli40/cupkit.git
+git clone https://github.com/subheeksh5599/cupkit.git
 cd cupkit
 npm install
 npm run dev
