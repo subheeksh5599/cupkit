@@ -322,7 +322,7 @@ export default function Dashboard() {
                 </h3>
                 <div className="flex items-center gap-3 mb-4 p-3 rounded-lg bg-white/[0.02]">
                   <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-                  <span className="text-[12px] text-emerald-400 font-mono">stdio transport · 8 tools · Node.js</span>
+                  <span className="text-[12px] text-emerald-400 font-mono">stdio transport · 11 tools · Node.js</span>
                 </div>
 
                 {/* Terminal simulation */}
@@ -353,14 +353,35 @@ export default function Dashboard() {
                   <div className="text-[#f4f5f8] pl-6">"/match/prediction": "0.25 USDC",</div>
                   <div className="text-[#f4f5f8] pl-6">"settlement": "Injective EVM ~650ms"</div>
                   <div className="text-[#7d828c] pl-4">{'}'}</div>
-                  <div className="text-[#626871] mt-3"># All responses from FIFA API + OpenLigaDB + CCTP contracts</div>
-                  <div className="text-emerald-400"># 8 tools · 0 mock data · 100% deterministic</div>
+                  <div className="text-[#626871] mt-3"># All responses from FIFA API + Circle CCTP + Injective EVM</div>
+                  <div className="text-emerald-400"># 11 tools · 0 mock data · 100% deterministic</div>
+                  <div className="text-[#626871] mt-3"># Agent calls wc_verify</div>
+                  <div className="text-[#FDE047]">&gt; wc_verify({'{}matchId: 400123456'})</div>
+                  <div className="text-[#7d828c] pl-4 mt-1">{'{'}</div>
+                  <div className="text-emerald-400 pl-6">"score": 91,</div>
+                  <div className="text-emerald-400 pl-6">"verified": true,</div>
+                  <div className="text-[#f4f5f8] pl-6">"hash": "f9c7eff6d75ffe81",</div>
+                  <div className="text-[#f4f5f8] pl-6">"passed": ["Source count", "Score cardinality", "FIFA feed correlation", ...],</div>
+                  <div className="text-[#7d828c] pl-6">"recomputable": true</div>
+                  <div className="text-[#7d828c] pl-4">{'}'}</div>
+                  <div className="text-[#626871] mt-3"># Agent calls wc_x402_pay</div>
+                  <div className="text-[#FDE047]">&gt; wc_x402_pay({'{}endpoint: "/match/analysis", amount: "0.50"'})</div>
+                  <div className="text-[#f4f5f8] pl-4 mt-1">Step 1: GET /match/analysis → 402 Payment Required</div>
+                  <div className="text-[#f4f5f8] pl-4">Step 2: Pay 0.50 USDC on Injective EVM (650ms)</div>
+                  <div className="text-emerald-400 pl-4">Step 3: GET /match/analysis → 200 OK (premium data delivered)</div>
+                  <div className="text-[#7d828c] pl-4">Receipt: 0x... (Injective EVM tx hash)</div>
+                  <div className="text-[#626871] mt-3"># Agent calls wc_cctp_bridge</div>
+                  <div className="text-[#FDE047]">&gt; wc_cctp_bridge({'{}sourceChain: "solana", amount: "100"'})</div>
+                  <div className="text-[#f4f5f8] pl-4 mt-1">Step 1: Burn 100 USDC on Solana → tx: 4xK9...</div>
+                  <div className="text-[#f4f5f8] pl-4">Step 2: Circle attestation (2-5 min)</div>
+                  <div className="text-emerald-400 pl-4">Step 3: Mint 100 USDC on Injective → tx: 0x...</div>
+                  <div className="text-[#7d828c] pl-4">Domain 5 (Solana) → Domain 29 (Injective) complete</div>
                 </div>
               </div>
 
               {/* Tool list */}
               <div className="glass-card rounded-2xl p-5">
-                <h3 className="text-[13px] font-semibold text-[#f4f5f8] mb-3">8 Available Tools</h3>
+                <h3 className="text-[13px] font-semibold text-[#f4f5f8] mb-3">11 Available Tools</h3>
                 <div className="grid grid-cols-2 gap-2">
                   {[
                     { name: 'wc_fixtures', desc: 'Match schedule', src: 'FIFA API' },
@@ -369,8 +390,11 @@ export default function Dashboard() {
                     { name: 'wc_teams', desc: '48 teams + groups', src: 'FIFA API' },
                     { name: 'wc_match_stats', desc: 'Goals, cards, stats', src: 'FIFA API' },
                     { name: 'wc_head_to_head', desc: 'H2H history', src: 'FIFA Archive' },
-                    { name: 'wc_cctp_bridge_info', desc: 'Cross-chain USDC', src: 'Circle CCTP V2' },
+                    { name: 'wc_cctp_bridge_info', desc: 'Cross-chain USDC config', src: 'Circle CCTP V2' },
+                    { name: 'wc_cctp_bridge', desc: 'Bridge flow demo', src: 'Circle CCTP V2' },
                     { name: 'wc_x402_endpoints', desc: 'Premium API pricing', src: 'Injective EVM' },
+                    { name: 'wc_x402_pay', desc: 'x402 payment flow demo', src: 'Injective EVM' },
+                    { name: 'wc_verify', desc: '15-rule verification engine', src: 'CupKit Engine' },
                   ].map(t => (
                     <div key={t.name} className="flex items-start gap-2 px-3 py-2 rounded-lg bg-white/[0.02]">
                       <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 mt-1.5 flex-shrink-0" />

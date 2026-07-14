@@ -310,8 +310,8 @@ export default function Landing() {
             CupKit · Open Source
           </div>
           <div className="flex gap-6">
-            <a href="https://github.com/damli40/cupkit" target="_blank" rel="noopener" className="text-white/40 hover:text-cyber-yellow transition-colors text-sm">GitHub</a>
-            <a href="https://github.com/damli40/cupkit#readme" target="_blank" rel="noopener" className="text-white/40 hover:text-cyber-yellow transition-colors text-sm">Docs</a>
+            <a href="https://github.com/subheeksh5599/cupkit" target="_blank" rel="noopener" className="text-white/40 hover:text-cyber-yellow transition-colors text-sm">GitHub</a>
+            <a href="https://github.com/subheeksh5599/cupkit#readme" target="_blank" rel="noopener" className="text-white/40 hover:text-cyber-yellow transition-colors text-sm">Docs</a>
             <a href="https://x.com/KomariS18774" target="_blank" rel="noopener" className="text-white/40 hover:text-cyber-yellow transition-colors text-sm">X</a>
           </div>
         </div>

@@ -16,8 +16,9 @@ Built for The Injective Global Cup, July 2026.
 | Capability | Technology | What It Does |
 |-----------|-----------|--------------|
 | **Live World Cup Data** | MCP Server | Fixtures, live scores, standings, match stats, head-to-head |
-| **Cross-Chain USDC** | CCTP | Bridge USDC from Ethereum, Solana, Base, Arbitrum into Injective |
-| **Pay-Per-Request** | x402 | Monetize World Cup data APIs with HTTP 402 micropayments |
+| **Cross-Chain USDC** | CCTP | Bridge USDC from Ethereum, Solana, Base, Arbitrum into Injective — with simulated transaction flow |
+| **Pay-Per-Request** | x402 | Monetize World Cup data APIs with HTTP 402 micropayments — with simulated payment flow |
+| **Verification Engine** | Deterministic | 15-rule engine, no LLM in verdict path, recomputable hash — runs as `wc_verify` tool |
 | **Agent Integration** | Agent Skill | This file. Import once, get all four technologies. |
 
 ## Prerequisites
@@ -64,6 +65,9 @@ wc_match_stats     — Detailed match statistics
 wc_cctp_bridge_info — CCTP bridge configuration
 wc_x402_endpoints  — Premium API pricing
 wc_head_to_head    — Team head-to-head history
+wc_verify          — 15-rule deterministic verification (score 0-100)
+wc_x402_pay        — x402 payment flow demo (HTTP 402 → USDC → receipt)
+wc_cctp_bridge     — CCTP V2 bridge flow demo (burn → attest → mint)
 ```
 
 ## Tool Reference
