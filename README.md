@@ -56,7 +56,7 @@ Agent imports CupKit ──> MCP server exposes 8 tools ──> Live data flows
 ### What you get
 
 - **Live World Cup data** — 100+ matches, 292 goals, 48 teams, all from FIFA API
-- **8 MCP tools** — `wc_live_score`, `wc_cctp_bridge_info`, `wc_x402_endpoints`, and more
+- **11 MCP tools** — `wc_live_score`, `wc_cctp_bridge`, `wc_x402_pay`, `wc_verify`, and more
 - **Cross-chain bridging** — CCTP V2: Solana, Ethereum, Base, Arbitrum → Injective (domain 29)
 - **x402 monetization** — HTTP 402 pay-per-request on Injective EVM (~650ms settlement)
 - **Agent Skill** — Portable SKILL.md importable into Claude Code, Cursor, Codex
